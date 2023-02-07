@@ -1,0 +1,44 @@
+@mixin font-face($family, $file, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url($path + $file + ".ttf");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face(
+  "OpenSans",
+  "OpenSans-Regular",
+  "src/assets/fonts/OpenSans/"
+);
+@include font-face(
+  "OpenSans",
+  "OpenSans-Light",
+  "src/assets/fonts/OpenSans/",
+  300
+);
+@include font-face(
+  "OpenSans",
+  "OpenSans-Medium",
+  "src/assets/fonts/OpenSans/",
+  500
+);
+@include font-face(
+  "OpenSans",
+  "OpenSans-SemiBold",
+  "src/assets/fonts/OpenSans/",
+  600
+);
+@include font-face(
+  "OpenSans",
+  "OpenSans-Bold",
+  "src/assets/fonts/OpenSans/",
+  700
+);
+@include font-face(
+  "OpenSans",
+  "OpenSans-ExtraBold",
+  "src/assets/fonts/OpenSans",
+  900
+);
