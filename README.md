@@ -2,7 +2,7 @@
 
 A FED test for Orchard written in ReactJS.
 
-###Tooling
+### Tooling
 
 **JS library/framework: React + Typescript**
 I have more experience with ReactJS more than other FED libraries/frameworks. I've also decided to integrate Typescript as in my experience, it has prevented a lot of what would've been careless mistakes. Typescript is also helpful as documentation for anyone looking through the code.
