@@ -13,7 +13,6 @@ export const Button: React.FC<Props> = ({
   onClick,
   ...rest
 }) => {
-  console.log(className);
   return (
     <button
       className={`${styles.button} ${className}`}

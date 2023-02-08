@@ -6,7 +6,7 @@ export const content: Content[] = [
     id: 1,
     images: [
       { src: LatestPageImages.CP2Image01, alt: "Fancy food on a table" },
-      { src: LatestPageImages.CP2Image01Retina, alt: "Fancy food on a table" },
+      { src: LatestPageImages.CP2Image01Retina },
     ],
     title: "Summer Lunch Menu By Mark Best",
     description:
@@ -18,7 +18,6 @@ export const content: Content[] = [
       { src: LatestPageImages.CP2Image02, alt: "Roast chicken on a table" },
       {
         src: LatestPageImages.CP2Image02Retina,
-        alt: "Roast chicken on a table",
       },
     ],
     title: "A Traditional Christmas Eve, Mark Best Style",
@@ -31,7 +30,6 @@ export const content: Content[] = [
       { src: LatestPageImages.CP2Image03, alt: "Christmas stew" },
       {
         src: LatestPageImages.CP2Image03Retina,
-        alt: "Christmas stew",
       },
     ],
     title: "Taking Taste Further",

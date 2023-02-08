@@ -17,7 +17,7 @@ export const Latest: React.FC<Props> = () => {
         </div>
         <div className={styles.articleGrid}>
           {content.map((item: Content) => (
-            <div className={styles.articleGridItem}>
+            <div className={styles.articleGridItem} key={`article__${item.id}`}>
               <Article content={item} />
             </div>
           ))}

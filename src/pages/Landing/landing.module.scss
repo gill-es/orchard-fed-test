@@ -63,7 +63,7 @@
     flex: 2;
     padding: 0 10px;
 
-    @include lg {
+    @include xl {
       flex: 1;
     }
 
@@ -71,19 +71,17 @@
       display: flex;
       flex: 1;
       flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
 
       .imageGridItem {
         display: flex;
-        flex: 1;
+        flex: 0;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 10px;
-        margin-bottom: 20px;
+        padding: 8px 10px;
 
         @include sm {
-          padding: 0 5px;
-          margin-bottom: 10px;
+          flex: 1;
         }
       }
     }
