@@ -1,5 +1,6 @@
 import React from "react";
 import { Landing } from "./pages/Landing/Landing";
+import { Latest } from "./pages/Latest/Latest";
 import "./App.scss";
 
 const App: React.FC = () => {
@@ -7,6 +8,7 @@ const App: React.FC = () => {
     <div className="App">
       <main>
         <Landing />
+        <Latest />
       </main>
     </div>
   );
