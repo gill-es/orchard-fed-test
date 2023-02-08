@@ -1,0 +1,27 @@
+@import "src/assets/styles/variables.scss";
+
+.image {
+  border-bottom: 4px solid $contrast-color;
+}
+
+.content {
+  padding: 15px 0;
+
+  .title {
+    margin: 15px auto;
+  }
+
+  .description {
+    margin: 15px auto;
+
+    p {
+      color: $text-lighter-color;
+      font-weight: 100;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+.readMore {
+}

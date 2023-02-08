@@ -1,0 +1,14 @@
+@import "src/assets/styles/variables.scss";
+
+.button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 8px 0;
+  font-weight: 500;
+  color: $text-base-color;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid $contrast-color;
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.875rem;
+}
