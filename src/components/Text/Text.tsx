@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import React from "react";
 import styles from "./text.module.scss";
 
@@ -17,10 +16,11 @@ export const Text: React.FC<Props> = ({
   maxLines = 2,
   component = "p",
 }) => {
+  const Tag = component;
+
   return (
-    <Typography
+    <Tag
       className={styles.text}
-      component={component}
       style={
         truncated
           ? {
@@ -31,6 +31,6 @@ export const Text: React.FC<Props> = ({
       }
     >
       {children}
-    </Typography>
+    </Tag>
   );
 };

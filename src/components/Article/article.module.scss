@@ -4,6 +4,8 @@
   position: relative;
   border-bottom: 4px solid $contrast-color;
   transition: 0.5s;
+  height: 250px;
+  margin-bottom: 5px;
 
   &:after {
     opacity: 0;
@@ -24,12 +26,17 @@
 }
 
 .content {
-  padding: 15px 0;
+  padding: 20px 0;
 
   .title {
     position: relative;
-    margin: 15px auto;
     display: inline-block;
+
+    h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
 
     &:before {
       content: "";
@@ -43,13 +50,15 @@
   }
 
   .description {
-    margin: 15px auto;
+    margin: 0 auto 15px;
 
     p {
       color: $text-lighter-color;
       font-weight: 100;
-      font-size: 0.875rem;
+      font-size: 0.925rem;
       line-height: 1.7;
+      transition: 0.5s;
+      // margin-right: 15px;
     }
   }
 }
@@ -71,6 +80,12 @@
 
       &:before {
         width: 100%;
+      }
+    }
+
+    .description {
+      p {
+        color: $text-base-color;
       }
     }
   }

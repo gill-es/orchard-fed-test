@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import { Text } from "../../components/Text/Text";
 import { Article } from "../../components/Article/Article";
 import { Content } from "../../interfaces/content";
@@ -12,20 +11,18 @@ interface Props {}
 export const Latest: React.FC<Props> = () => {
   return (
     <section>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <div className={styles.heading}>
-            <Text component="h2">All the latest from AEG</Text>
-          </div>
-        </Grid>
-        <Grid container item xs={12} spacing={2}>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <Text component="h2">All the latest from AEG</Text>
+        </div>
+        <div className={styles.articleGrid}>
           {content.map((item: Content) => (
-            <Grid item xs={4} key={`article__${item.id}`}>
+            <div className={styles.articleGridItem}>
               <Article content={item} />
-            </Grid>
+            </div>
           ))}
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </section>
   );
 };

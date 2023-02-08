@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import { Image } from "../../components/Image/Image";
 import { Text } from "../../components/Text/Text";
 import { LandingPageImages } from "../../assets/images";
@@ -10,35 +9,35 @@ interface Props {}
 export const Landing: React.FC<Props> = () => {
   return (
     <section>
-      <Grid container spacing={3}>
-        <Grid container item xs={12} md={8} spacing={2}>
-          <Grid item xs={6}>
-            <div>
+      <div className={styles.container}>
+        <div className={styles.imageGrid}>
+          <div className={styles.imageGridCol}>
+            <div className={styles.imageGridItem}>
               <Image
                 src={LandingPageImages.CP1Image01}
                 srcSet={`${LandingPageImages.CP1Image01Retina} 2x`}
                 alt="Father and son on a field"
               />
             </div>
-          </Grid>
-          <Grid container item xs={6} spacing={2}>
-            <Grid item xs={12}>
+          </div>
+          <div className={styles.imageGridCol}>
+            <div className={styles.imageGridItem}>
               <Image
                 src={LandingPageImages.CP1Image02}
                 srcSet={`${LandingPageImages.CP1Image02Retina} 2x`}
                 alt="Organic garden crops in a bowl"
               />
-            </Grid>
-            <Grid item xs={12}>
+            </div>
+            <div className={styles.imageGridItem}>
               <Image
                 src={LandingPageImages.CP1Image03}
                 srcSet={`${LandingPageImages.CP1Image03} 2x`}
                 alt="Four asparagus sticks"
               />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid container item xs={12} md={4}>
+            </div>
+          </div>
+        </div>
+        <div className={styles.textGrid}>
           <div>
             <div className={styles.calloutHeading}>
               <Text component="h2">Answer your body's needs</Text>
@@ -51,7 +50,7 @@ export const Landing: React.FC<Props> = () => {
                 healthy, but that artificial flavourings are getting in the way.
                 This can be reversed by focusing on high-quality ingredients and
                 being mindful as your appetite guides you to consume according
-                your body's needs.
+                to your body's needs.
               </Text>
             </div>
           </div>
@@ -66,8 +65,8 @@ export const Landing: React.FC<Props> = () => {
               </p>
             </div>
           </div>
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </section>
   );
 };

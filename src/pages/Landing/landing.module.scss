@@ -6,12 +6,16 @@
   margin-bottom: 25px;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.58rem;
     font-weight: 100;
     text-transform: uppercase;
     margin: 0;
     letter-spacing: normal;
     color: $text-light-color;
+
+    @include sm {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -21,7 +25,8 @@
     font-weight: 100;
     line-height: 1.7;
     color: $text-light-color;
-    margin: 0;
+    margin-bottom: 30px;
+    margin-right: 15px;
   }
 }
 
@@ -41,5 +46,57 @@
     font-weight: 400;
     letter-spacing: 0.04rem;
     line-height: 1.6;
+    margin-right: 15px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  @include md {
+    flex-direction: column;
+  }
+
+  .imageGrid {
+    display: flex;
+    flex: 2;
+    padding: 0 10px;
+
+    @include lg {
+      flex: 1;
+    }
+
+    .imageGridCol {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .imageGridItem {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-bottom: 20px;
+
+        @include sm {
+          padding: 0 5px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .textGrid {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-right: 50px;
+
+    @include md {
+      padding: 20px;
+    }
   }
 }
