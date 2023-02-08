@@ -38,11 +38,9 @@ main {
 section {
   display: flex;
   place-items: center;
-  height: 100vh;
   min-height: 568px;
 
   @include lg {
-    height: auto;
     margin-bottom: 30px;
   }
 }
@@ -62,4 +60,14 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.word {
+  display: inline-block;
+  opacity: calc(1 + ((var(--viewport-y) * 1.5) - var(--char-percent)));
+}
+
+.char {
+  display: inline-block;
+  opacity: calc(1 + ((var(--viewport-y) * 1.5) - var(--char-percent)));
 }

@@ -1,5 +1,9 @@
 @import "src/assets/styles/variables.scss";
 
+.latest {
+  // height: calc(var(--scroll-length) * 100vh);
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -42,4 +46,33 @@
       }
     }
   }
+}
+
+.headingAnimation1,
+.articleGridItem {
+  position: relative;
+  transition: 0.5s;
+}
+
+.headingAnimation1[data-scroll="out"] {
+  opacity: calc(1 + var(--viewport-y));
+  bottom: -100px;
+}
+
+.headingAnimation2[data-scroll="in"] {
+  opacity: calc(1 + var(--viewport-y));
+  color: rgba(255, 255, 255, 1);
+}
+
+.headingAnimation2[data-scroll="out"] {
+  opacity: calc(1 + var(--viewport-y));
+}
+
+.headingAnimation1[data-scroll="in"] {
+  opacity: calc(1 + var(--viewport-y));
+  bottom: 0;
+}
+
+.articleGridItem {
+  opacity: calc(1 + var(--viewport-y));
 }

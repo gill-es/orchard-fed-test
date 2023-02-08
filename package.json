@@ -12,6 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "scroll-out": "^2.2.12",
+    "splitting": "^1.0.6",
     "yet-another-react-lightbox": "^2.3.0"
   },
   "devDependencies": {

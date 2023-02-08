@@ -1,5 +1,10 @@
 @import "src/assets/styles/variables.scss";
 
+.landing {
+  --scroll-length: 2;
+  height: calc(var(--scroll-length) * 100vh);
+}
+
 .calloutHeading {
   border-bottom: 1px solid #fff;
   padding-bottom: 10px;
@@ -34,7 +39,8 @@
   h3 {
     color: $contrast-color;
     font-size: 0.925rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-transform: uppercase;
     margin: 0;
   }
@@ -97,4 +103,36 @@
       padding: 20px;
     }
   }
+}
+
+// animation
+.imageGridItem1 {
+  opacity: calc(1 + var(--viewport-y));
+}
+
+.imageGridItem2 {
+  opacity: calc(0.75 + var(--viewport-y));
+}
+
+.imageGridItem3 {
+  opacity: calc(0.6 + var(--viewport-y));
+}
+
+.calloutDescription {
+  position: relative;
+  bottom: calc(-30px + var(--viewport-y) * 60px);
+  opacity: calc(1 + var(--viewport-y));
+}
+
+.takeawayHeading {
+  position: relative;
+  bottom: calc(-30px + var(--viewport-y) * 60px);
+  opacity: calc(1 + var(--viewport-y));
+}
+
+.takeawayDescription {
+  opacity: 0;
+  position: relative;
+  bottom: calc(-30px + var(--viewport-y) * 70px);
+  opacity: calc(0.5 + var(--viewport-y));
 }

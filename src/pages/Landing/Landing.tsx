@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image } from "../../components/Image/Image";
 import { Text } from "../../components/Text/Text";
 import { Image as ImageInterface } from "../../interfaces/image";
 import styles from "./landing.module.scss";
+
+import ScrollOut from "scroll-out";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -26,13 +28,29 @@ export const Landing: React.FC<Props> = () => {
     setLightBoxImage(image);
   };
 
+  useEffect(() => {
+    const scrollOut = ScrollOut({
+      cssProps: {
+        visibleY: true,
+        viewportY: true,
+        offset: 100,
+      },
+    });
+
+    return () => {
+      scrollOut.teardown();
+    };
+  }, []);
+
   return (
     <>
-      <section>
+      <section data-scroll className={styles.landing}>
         <div className={styles.container}>
           <div className={styles.imageGrid}>
             <div className={styles.imageGridCol}>
-              <div className={styles.imageGridItem}>
+              <div
+                className={`${styles.imageGridItem} ${styles.imageGridItem1}`}
+              >
                 <a
                   role="button"
                   href="#"
@@ -47,7 +65,9 @@ export const Landing: React.FC<Props> = () => {
               </div>
             </div>
             <div className={styles.imageGridCol}>
-              <div className={styles.imageGridItem}>
+              <div
+                className={`${styles.imageGridItem} ${styles.imageGridItem2}`}
+              >
                 <a
                   role="button"
                   href="#"
@@ -60,7 +80,9 @@ export const Landing: React.FC<Props> = () => {
                   />
                 </a>
               </div>
-              <div className={styles.imageGridItem}>
+              <div
+                className={`${styles.imageGridItem} ${styles.imageGridItem3}`}
+              >
                 <a
                   role="button"
                   href="#"
