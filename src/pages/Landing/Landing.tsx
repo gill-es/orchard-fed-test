@@ -44,7 +44,7 @@ export const Landing: React.FC<Props> = () => {
               <Text component="h2">Answer your body's needs</Text>
             </div>
             <div className={styles.calloutDescription}>
-              <Text truncated maxLines={4}>
+              <Text>
                 The way ingredients are sourced affects the way we nourish our
                 bodies. Author Mark Schatzer believes our body naturally
                 develops an appetite for the foods and nutrients it needs to be

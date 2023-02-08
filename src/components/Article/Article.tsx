@@ -33,7 +33,9 @@ export const Article: React.FC<Props> = ({ content }) => {
             <Text component="h1">{title}</Text>
           </div>
           <div className={styles.description}>
-            <Text>{description}</Text>
+            <Text truncated maxLines={8}>
+              {description}
+            </Text>
           </div>
         </div>
         <div>
