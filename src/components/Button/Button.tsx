@@ -3,12 +3,23 @@ import styles from "./button.module.scss";
 
 interface Props {
   children: React.ReactNode;
+  className?: string;
   onClick?: () => void;
 }
 
-export const Button: React.FC<Props> = ({ children, onClick, ...rest }) => {
+export const Button: React.FC<Props> = ({
+  children,
+  className = "",
+  onClick,
+  ...rest
+}) => {
+  console.log(className);
   return (
-    <button className={styles.button} onClick={onClick} {...rest}>
+    <button
+      className={`${styles.button} ${className}`}
+      onClick={onClick}
+      {...rest}
+    >
       {children}
     </button>
   );

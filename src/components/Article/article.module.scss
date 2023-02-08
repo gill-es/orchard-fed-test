@@ -1,14 +1,45 @@
 @import "src/assets/styles/variables.scss";
 
 .image {
+  position: relative;
   border-bottom: 4px solid $contrast-color;
+  transition: 0.5s;
+
+  &:after {
+    opacity: 0;
+    content: " ";
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: rgb(207, 20, 48);
+    background: linear-gradient(
+      0deg,
+      rgba(207, 20, 48, 0.6474964985994398) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
 }
 
 .content {
   padding: 15px 0;
 
   .title {
+    position: relative;
     margin: 15px auto;
+    display: inline-block;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      border-bottom: 2px solid $contrast-color;
+      transition: 0.5s;
+    }
   }
 
   .description {
@@ -23,5 +54,69 @@
   }
 }
 
+// trigger animations on article hover
+.article {
+  &:hover {
+    .image {
+      border-color: transparent;
+
+      &:after {
+        opacity: 1;
+        height: 100%;
+      }
+    }
+
+    .title {
+      opacity: 0.8;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// readMore animation
 .readMore {
+  position: relative;
+  transition: 0.5s;
+
+  &:before,
+  &:after {
+    content: "";
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  &:before {
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-left: 1px solid $contrast-color;
+    border-right: 1px solid $contrast-color;
+  }
+
+  &:after {
+    left: 0;
+    top: 0;
+    border-top: 1px solid $contrast-color;
+    height: 100%;
+    width: 0;
+  }
+
+  &:hover {
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    opacity: 0.8;
+
+    &:before {
+      height: 100%;
+    }
+
+    &:after {
+      width: 100%;
+    }
+  }
 }

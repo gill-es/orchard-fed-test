@@ -19,7 +19,7 @@ export const Article: React.FC<Props> = ({ content }) => {
   };
 
   return (
-    <article>
+    <article className={styles.article}>
       <div className={styles.image}>
         <Image
           src={images[0].src}
@@ -39,7 +39,10 @@ export const Article: React.FC<Props> = ({ content }) => {
           </div>
         </div>
         <div>
-          <Button onClick={(): void => handleReadMoreClick(id)}>
+          <Button
+            className={styles.readMore}
+            onClick={(): void => handleReadMoreClick(id)}
+          >
             Read more
           </Button>
         </div>
