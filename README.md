@@ -2,6 +2,23 @@
 
 A FED test for Orchard written in ReactJS.
 
+### Running
+
+To run, use
+```
+npm run dev
+```
+
+To build, use
+```
+npm run build
+```
+
+To preview build, use
+```
+npm run preview
+```
+
 ### Tooling
 
 **JS library/framework: React + Typescript**
